@@ -1,0 +1,19 @@
+DROP TABLE IF EXISTS blacklist;
+DROP TABLE IF EXISTS user;
+DROP TABLE IF EXISTS judge_keys;
+
+CREATE TABLE blacklist (
+  username TEXT PRIMARY KEY UNIQUE NOT NULL
+);
+
+CREATE TABLE user (
+  twitter TEXT PRIMARY KEY UNIQUE NOT NULL,
+  keybase TEXT NOT NULL
+);
+
+CREATE TABLE judge_keys (
+  g TEXT PRIMARY KEY NOT NULL,
+  o TEXT NOT NULL,
+  pk_j TEXT NOT NULL,
+  sk_j TEXT NOT NULL
+);
