@@ -7,7 +7,6 @@ from petlib.ec import EcGroup, EcPt
 import binascii
 import argparse
 import time
-import numpy as np
 
 sys.path.append(sys.path[0] + "/amf-algorithms/")
 import dmf
@@ -247,7 +246,7 @@ def parse_direct_message(direct_message, user_id):
                  event['message_create']['message_data']['text']))
     return messages
 
-# Split the messages received over Twitter into tuples of text and signatures 
+# Split the messages received over Twitter into tuples of text and signatures
 def parse_message_tag(m):
     if DELIMITER not in m[1]:
         return m
